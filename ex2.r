@@ -23,3 +23,11 @@ print(tableau)
 plot(tableau)
 # 4. Calculer la moyenne et l’écart-type empirique du nombre de bourgeonnements
 #    par feuille.
+moyenne = 0
+i = 0
+for (i in 1:length(bourgeonnements)){
+  moyenne = moyenne + bourgeonnements[i] * contamines[i]
+}
+moyenne = moyenne / length(bourgeonnements)
+print("moyenne :")
+print(moyenne)

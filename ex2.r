@@ -39,7 +39,7 @@ print(moyenne)
 variance = 0
 
 for (i in 1:length(bourgeonnements)){
-  variance = variance + ((bourgeonnements[i] * contamines[i]) - moyenne)^2
+  variance = variance + ( contamines[i] - moyenne)^2
 }
 variance = variance / length(bourgeonnements)
 print("variance :")

@@ -11,7 +11,9 @@ contamines = c(482,133,46,24,6,5,2,1,0,1,1)
 print("La population statistique observée est le nombre de feuilles contaminées selon son nombre de bourgeonnements.\n")
 cat("La taille de l’échantillon est de ",length(bourgeonnements),"\n")
 # 2. Quel est le caractère statistique observé et sa nature ?
-
+print("Le carctère spécifique observé est la contamination.\n")
+print("Sa nature est qualitative.")
 # 3. Représenter graphiquement les données ?
+
 # 4. Calculer la moyenne et l’écart-type empirique du nombre de bourgeonnements
 #    par feuille.

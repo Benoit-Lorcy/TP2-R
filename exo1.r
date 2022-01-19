@@ -12,9 +12,14 @@ hist(E)
 # Question 4
 plot(E); lines(smooth.spline(E))
 
-# Question
+# Question 5
 summary(E)
 median(E)
 q1 <- quantile(E, 0.25)
 q3 <- quantile(E, 0.75)
 q3 - q1
+
+# Question 6
+q05 <- quantile(E, 0.05)
+q95 <- quantile(E, 0.95)
+E[which(E >= q05 & E <= q95)]

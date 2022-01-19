@@ -9,3 +9,4 @@
 pour chaque exo créer exo1.r exo2.r ...\
 
 TODO:DELETE OLD UNO REPOSITORY
+TODO:leave

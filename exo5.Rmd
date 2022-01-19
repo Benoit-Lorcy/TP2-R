@@ -1,0 +1,54 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+install.packages("Hmisc")
+```
+```{r}
+library(Hmisc)
+```
+
+
+
+TP 3 : Exercice 5
+
+```{r}
+composants_bleu = c(3.4, 3.5, 3.8, 3.9, 4, 4.1, 4.1, 4.1, 4.2, 4.2, 4.4, 4.4, 4.5)
+composants_jaune = c(4.1, 4.5, 4.5, 4.5, 4.6, 4.6, 4.8, 4.9, 5, 5, 5.1, 5.2, 5.3, 5.3, 5.4, 5.6, 5.9)
+composants_vert = c(4.8, 5.1, 5.2, 5.3, 5.3, 5.4, 5.5, 5.5, 5.7, 5.7, 6.1, 6.2, 6.7, 6.7, 6.7)
+```
+
+1 -
+La population observe est un ensemble de differents composants bleu, jaune ou vert
+
+2 -
+Le caractere statistique observe est la duree de vie, caractere quantitatif
+
+3 -
+```{r}
+mean(composants_bleu)
+sd(composants_bleu)
+
+mean(composants_jaune)
+sd(composants_jaune)
+
+mean(composants_vert)
+sd(composants_vert)
+```
+
+4 - 
+```{r}
+moyennes = c(mean(composants_bleu), mean(composants_jaune), mean(composants_vert))
+ecarttype = c(sd(composants_bleu), sd(composants_jaune), sd(composants_vert))
+errbar(c(1,2,3),moyennes,moyennes+ecarttype,moyennes-ecarttype,type="b",
+       col='black',cex=2,errbar.col='green',
+       xlab="Bleu/Jaune/Vert",ylab="Duree de vie",
+       pch="*")
+```
+5 - 
+```{r}
+boxplot(composants_bleu, composants_jaune, composants_vert)
+```
+
